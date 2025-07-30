@@ -8,7 +8,7 @@ This data was collected for the paper:
 **Data-Efficient Discovery of Hyperelastic TPMS Metamaterials with Extreme Energy Dissipation**
 <https://doi.org/10.1145/3721238.3730759>
 
-The dataset was generated through a batch Bayesian optimization process to discover structures with exceptional energy dissipation capabilities.
+The dataset was generated with physical printing and testing, guided by a batch Bayesian optimization process to discover structures with exceptional energy dissipation capabilities.
 
 ## Dataset Structure
 
