@@ -5,24 +5,26 @@
 This repository contains the first open-source, physically validated dataset of microscale hyperelastic metamaterials obtained by interpolating between eight TPMS primitives. The dataset comprises the results of 274 uniaxial compression experiments on unique 3D-printed microscale structures.
 
 This data was collected for the paper:
-**Data-Efficient Discovery of Hyperelastic TPMS Metamaterials with Extreme Energy Dissipation**
-<https://doi.org/10.1145/3721238.3730759>
+**Data-Efficient Discovery of Hyperelastic TPMS Metamaterials with Extreme Energy Dissipation**.
+
+**Paper Link:** <https://doi.org/10.1145/3721238.3730759>
+
 
 The dataset was generated with physical printing and testing, guided by a batch Bayesian optimization process to discover structures with exceptional energy dissipation capabilities.
 
 ## Dataset Structure
 
-The dataset is organized into subdirectories within the main `data/` folder. Each subdirectory is named after the string representation of the structure's parameters and contains the data for a single experimental sample.
+The dataset is organized into subdirectories within the main `dataset/` folder. Each subdirectory is named after the string representation of the structure's parameters and contains the data for a single experimental sample.
 
 ```
-data/
+dataset/
 ├── [params_string_1]/
 │   ├── [params_string_1].json
-│   └── [params_string_1]_plot.png
+│   └── plot.png
 │
 ├── [params_string_2]/
 │   ├── [params_string_2].json
-│   └── [params_string_2]_plot.png
+│   └── plot.png
 ...
 ```
 
@@ -32,18 +34,19 @@ data/
 
 ## File Format
 
-Each sample is stored in a `.json` file containing three keys: `params`, `strain`, and `stress`.
+Each sample is stored in a `.json` file containing four keys: `params`, `strain`, `stress`, and `energy_dissipation`.
 
 ```json
 {
   "params": [0.0, 0.0, 0.24, 0.2, 0.0, 0.56, 0.0, 0.0],
   "strain": [0.0, 0.005, "...", 0.595, 0.0],
-  "stress": [0.0, 0.001, "...", 0.45, 0.01]
+  "stress": [0.0, 0.001, "...", 0.45, 0.01],
+  "energy_dissipation": 0.0123
 }
 ```
 
 
--   **`params`**: An 8-element array of floating-point numbers that sum to 1.0. These are the barycentric weights used to interpolate between the 8 TPMS primitives to define the structure's geometry. The order of primitives is:
+-   **`params`**: An 8-element array of floating-point numbers, rounded to three decimals, that sum to 1.0. These are the barycentric weights used to interpolate between the 8 TPMS primitives to define the structure's geometry. The order of primitives is:
 
   1. Schoen Gyroid
   2. Schwarz Diamond
@@ -57,6 +60,8 @@ Each sample is stored in a `.json` file containing three keys: `params`, `strain
 -   **`strain`**: A 120-element array representing the engineering strain applied during the compression test. The curve includes both the loading (increasing strain) and unloading (decreasing strain) phases.
 
 -   **`stress`**: A 120-element array representing the corresponding engineering stress (in Megapascals, MPa) measured during the test.
+
+-   **`energy_dissipation`**: The area between the loading and unloading curves (stress × strain, in MJ/m³). The paper reports the same quantity in kJ/m³, i.e. this value multiplied by 1000.
 
 ## Data Generation
 
@@ -74,7 +79,7 @@ If you use this dataset in your research, please cite our paper:
   isbn = {979-8-4007-1540-2},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
-  url = {[https://doi.org/10.1145/3721238.3730759](https://doi.org/10.1145/3721238.3730759)},
+  url = {https://doi.org/10.1145/3721238.3730759},
   doi = {10.1145/3721238.3730759},
   booktitle = {Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
   series = {SIGGRAPH '25}
