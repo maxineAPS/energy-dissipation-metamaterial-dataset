@@ -5,8 +5,10 @@
 This repository contains the first open-source, physically validated dataset of microscale hyperelastic metamaterials obtained by interpolating between eight TPMS primitives. The dataset comprises the results of 274 uniaxial compression experiments on unique 3D-printed microscale structures.
 
 This data was collected for the paper:
-**Data-Efficient Discovery of Hyperelastic TPMS Metamaterials with Extreme Energy Dissipation**
-<https://doi.org/10.1145/3721238.3730759>
+**Data-Efficient Discovery of Hyperelastic TPMS Metamaterials with Extreme Energy Dissipation**.
+
+**Paper Link:** <https://doi.org/10.1145/3721238.3730759>
+
 
 The dataset was generated with physical printing and testing, guided by a batch Bayesian optimization process to discover structures with exceptional energy dissipation capabilities.
 
