@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the first open-source, physically validated dataset of microscale hyperelastic metamaterials. The dataset comprises the results of 274 uniaxial compression experiments on unique 3D-printed TPMS structures.
+This repository contains the first open-source, physically validated dataset of microscale hyperelastic metamaterials obtained by interpolating between eight TPMS primitives. The dataset comprises the results of 274 uniaxial compression experiments on unique 3D-printed TPMS structures.
 
 This data was collected for the paper:
 **Data-Efficient Discovery of Hyperelastic TPMS Metamaterials with Extreme Energy Dissipation**
