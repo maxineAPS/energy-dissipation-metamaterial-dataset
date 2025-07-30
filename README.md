@@ -37,10 +37,11 @@ Each sample is stored in a `.json` file containing three keys: `params`, `strain
 ```json
 {
   "params": [0.0, 0.0, 0.24, 0.2, 0.0, 0.56, 0.0, 0.0],
-  "strain": [0.0, 0.005, ..., 0.595, 0.0],
-  "stress": [0.0, 0.001, ..., 0.45, 0.01]
+  "strain": [0.0, 0.005, "...", 0.595, 0.0],
+  "stress": [0.0, 0.001, "...", 0.45, 0.01]
 }
 ```
+
 
 -   **`params`**: An 8-element array of floating-point numbers that sum to 1.0. These are the barycentric weights used to interpolate between the 8 TPMS primitives to define the structure's geometry. The order of primitives is:
 
