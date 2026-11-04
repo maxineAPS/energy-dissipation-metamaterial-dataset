@@ -84,3 +84,7 @@ If you use this dataset in your research, please cite our paper:
   booktitle = {Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
   series = {SIGGRAPH '25}
 }
+
+## License
+
+This dataset is released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license (see [LICENSE](LICENSE)). Please cite the paper when you use it.
